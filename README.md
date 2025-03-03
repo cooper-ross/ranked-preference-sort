@@ -8,7 +8,7 @@
 We can visualize an example the groups and preferences like so (we have 6 users who have ranked the groups best to worst, and 3 groups each with a capacity of 2):
 
 <p align="center">
-  <img src="https://github.com/cooper-ross/ranked-preference-sort/assets/120236631/eb43d988-6ac4-4d44-9d53-512fdb8ef67e">
+  <img src="https://github.com/user-attachments/assets/2c2e27e7-76e5-4084-a4d0-5078cae0c476">
 </p>
 
 Let's consider the situation with the group of users mentioned above. When we go through them one by one (in the order they are declared), the initial user assigned is John, who gets his first-choice group, Group 1. Here's what this implies: Jane and Olivia won't be able to have their first-choice group, and both of them dislike Group 2, which is the most readily available option. Consequently, either Jane or Olivia will have to settle for their least preferred choice.
