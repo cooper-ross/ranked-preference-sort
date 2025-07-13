@@ -8,8 +8,9 @@
 We can visualize an example the groups and preferences like so (we have 6 users who have ranked the groups best to worst, and 3 groups each with a capacity of 2):
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2c2e27e7-76e5-4084-a4d0-5078cae0c476">
+  <img src="https://github.com/user-attachments/assets/70e0ab81-fce8-40c1-84c6-5c838128404e">
 </p>
+
 
 Let's consider the situation with the group of users mentioned above. When we go through them one by one (in the order they are declared), the initial user assigned is John, who gets his first-choice group, Group 1. Here's what this implies: Jane and Olivia won't be able to have their first-choice group, and both of them dislike Group 2, which is the most readily available option. Consequently, either Jane or Olivia will have to settle for their least preferred choice.
 
@@ -26,7 +27,7 @@ Now, let's examine an alternative scenario where we prioritize Jane and Olivia o
 So now that we know that, how can we consider the impact of each choice to the final result? One method for visualizing and analyzing this impact is by using a directed graph (specifically a directed minimum-cost flow network), like the one I have below:
 
 <p align="center">
-  <img src="https://github.com/cooper-ross/ranked-preference-sort/assets/120236631/62addfb6-3973-4a9b-9a03-6bece0ac0a8e)">
+  <img src="https://github.com/user-attachments/assets/ee334d6a-5e96-4ccb-a030-641c3a94a252">
 </p>
 
 Imagine we create a separate point (node) for each user and another point (node) for each group. We want to depict all the users and the choices they make. To do this, we use connections, like lines, to link each user to the group they prefer, and we assign a weight to these connections. For example, if John's favorite is Group 1, the connection from his node to the Group 1 node doesn't cost anything (it's free). On the other hand, if John ends up in his least favorite group, Group 3, that connection costs $2. These costs may seem somewhat arbitrary, but they actually reflect the order of preference for each user's choices.
